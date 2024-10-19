@@ -96,6 +96,7 @@ class Calculadora:
         '''
         resultado = a - b
         resultado_validado = self._validar_resultado(resultado)
+        self._guardar_log("Resta", a, b, resultado_validado)
         return resultado_validado
 
     def multiplicar(self, a, b):
@@ -116,6 +117,7 @@ class Calculadora:
         '''
         resultado = a * b
         resultado_validado = self._validar_resultado(resultado)
+        self._guardar_log("Multiplicar", a, b, resultado_validado)
         return resultado_validado
 
     def dividir(self, a, b):
@@ -140,7 +142,9 @@ class Calculadora:
             Se lanza cuando el denominador es cero.
         '''
         if b == 0:
+            self._guardar_log("Dividir [ERRROR]",a,b, 0)
             raise ValueError("No se puede dividir entre 0")
         resultado = a / b
         resultado_validado = self._validar_resultado(resultado)
+        self._guardar_log("Dividir", a, b, resultado_validado)
         return resultado_validado

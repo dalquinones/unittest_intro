@@ -15,7 +15,7 @@ Recuerda descargar python `3.10` o mayor
 1. Crear y ejecutar los tests unitarios para cada funcion
 
 * Usando unittest: 
-    1. `python -m unittest -v dicover tests/` Para ejecutar todos los tests en una carpeta.
+    1. `python -m unittest discover -v tests/` Para ejecutar todos los tests en una carpeta.
     2. `python -m unittest tests/<nombre_del_archivo>` Para ejecutar los tests en un archivo.
 * Usando pytest:
     1. `pytest tests/<nombre_del_archivo>` Para ejecutar todos los tests en una carpeta.
